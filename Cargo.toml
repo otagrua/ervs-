@@ -1,0 +1,16 @@
+[package]
+name = "ervs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.6.1", features = ["derive"] }
+
+[lints.clippy]
+pedantic = "warn"
+nursery = "warn"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
